@@ -1,7 +1,7 @@
 package Servlets;
 
-import Daos.CancionesDao;
-import Beans.CancionesBeans;
+import Daos.RecomendadosDao;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "CancionServlet",urlPatterns = {"/listaCanciones"})
-public class CancionServlet extends HttpServlet {
+@WebServlet(name = "RecomendadosServlet",urlPatterns = {"/listaRecomendados"})
+public class RecomendadosServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
 
@@ -22,12 +22,11 @@ public class CancionServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
 
-        CancionesDao cancionDao = new CancionesDao();
-        request.setAttribute("listaCanciones",cancionDao.listarCanciones());
+        RecomendadosDao recomendadosDao = new RecomendadosDao();
+        request.setAttribute("listaCancionesRecomendadas",recomendadosDao.listarCancionesRecomendadas());
 
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("listaCanciones.jsp");
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("listaRecomendados.jsp");
         requestDispatcher.forward(request,response);
 
     }
 }
-
