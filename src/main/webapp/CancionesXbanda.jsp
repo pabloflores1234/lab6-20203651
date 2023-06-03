@@ -28,6 +28,7 @@
                 <th class="text-light">ID</th>
                 <th class="text-light">CANCION</th>
                 <th class="text-light">BANDA</th>
+                <th class="text-light">Agregar a Favoritos</th>
             </tr>
             </thead>
             <tbody>
@@ -36,6 +37,9 @@
                 <td class="text-light border"><%=cxbanda.getIdCancion() %></td>
                 <td class="text-light border"><%=cxbanda.getNombrecancion()%></td>
                 <td class="text-light border"><%=cxbanda.getBanda()%></td>
+                <td>
+                    <button class="btn btn-success">+</button>
+                </td>
             </tr>
             <%}%>
             </tbody>

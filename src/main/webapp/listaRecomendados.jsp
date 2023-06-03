@@ -24,6 +24,7 @@
         <th class="text-light">CANCION</th>
         <th class="text-light">BANDA</th>
         <th class="text-light">Ver</th>
+        <th class="text-light">Agregar a Favoritos</th>
 
       </tr>
       </thead>
@@ -34,8 +35,12 @@
         <td class="text-light border"><%=R.getNombrecancionRecomendada()%></td>
         <td class="text-light border"><%=R.getBandaRecomendada()%></td>
         <td>
+          <button class="btn btn-success">+</button>
+        </td>
+        <td>
           <a class="btn btn-success" href="<%=request.getContextPath()%>/CancionesXbanda?bandaId=<%=R.getBandaRecomendada()%>">Más de la banda</a>
         </td>
+
 
       </tr>
       <%}%>

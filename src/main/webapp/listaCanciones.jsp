@@ -33,7 +33,7 @@
                     <td class="text-light border"><%=c.getNombrecancion()%></td>
                     <td class="text-light border"><%=c.getBanda()%></td>
                     <td>
-                        
+                        <button class="btn btn-success">+</button>
                     </td>
                 </tr>
                 <%}%>

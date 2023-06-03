@@ -23,6 +23,7 @@
                     <th class="text-light">ID</th>
                     <th class="text-light">CANCION</th>
                     <th class="text-light">BANDA</th>
+                    <th class="text-light">Agregar a favoritos</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -31,6 +32,9 @@
                     <td class="text-light border"><%=c.getIdCancion() %></td>
                     <td class="text-light border"><%=c.getNombrecancion()%></td>
                     <td class="text-light border"><%=c.getBanda()%></td>
+                    <td>
+                        <button class="btn btn-success">+</button>
+                    </td>
                 </tr>
                 <%}%>
                 </tbody>
